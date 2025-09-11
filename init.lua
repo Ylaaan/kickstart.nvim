@@ -269,7 +269,11 @@ require('lazy').setup({
     -- @type render.md.UserConfig
     opts = {},
   },
-
+  {
+    'catppuccin/nvim',
+    name = 'catppuccin',
+    priority = 1000,
+  },
   -- NOTE: Plugins can also be added by using a table,
   -- with the first argument being the link and the following
   -- keys can be used to configure plugin behavior/loading/etc.
@@ -294,15 +298,16 @@ require('lazy').setup({
   -- See `:help gitsigns` to understand what the configuration keys do
   { -- Adds git related signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',
-    --   opts = {
-    --     signs = {
-    --       add = { text = '+' },
-    --       change = { text = '~' },
-    --       delete = { text = '_' },
-    --       topdelete = { text = '‾' },
-    --       changedelete = { text = '~' },
-    --     },
-    --   },
+    opts = {
+      current_line_blame = true,
+      --     signs = {
+      --       add = { text = '+' },
+      --       change = { text = '~' },
+      --       delete = { text = '_' },
+      --       topdelete = { text = '‾' },
+      --       changedelete = { text = '~' },
+      --     },
+    },
   },
 
   -- NOTE: Plugins can also be configured to run Lua code when they are loaded.
