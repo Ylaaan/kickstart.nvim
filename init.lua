@@ -157,7 +157,6 @@ vim.o.inccommand = 'split'
 
 -- Show which line your cursor is on
 vim.o.cursorline = true
-
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.o.scrolloff = 10
 
@@ -250,6 +249,15 @@ require('lazy').setup({
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
   'NMAC427/guess-indent.nvim', -- Detect tabstop and shiftwidth automatically
   {
+    'NeogitOrg/neogit',
+    dependencies = {
+      'nvim-lua/plenary.nvim', -- required
+      'sindrets/diffview.nvim', -- optional - Diff integration
+      -- Only one of these is needed.
+      'nvim-telescope/telescope.nvim', -- optional
+    },
+  },
+  {
     'windwp/nvim-autopairs',
     event = 'InsertEnter',
     config = true,
@@ -282,6 +290,9 @@ require('lazy').setup({
     event = 'BufReadPre',
     opts = { -- set to setup table
     },
+  },
+  {
+    'sitiom/nvim-numbertoggle',
   },
   -- NOTE: Plugins can also be added by using a table,
   -- with the first argument being the link and the following
