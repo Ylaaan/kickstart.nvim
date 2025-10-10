@@ -128,6 +128,9 @@ vim.o.undofile = true
 vim.o.ignorecase = true
 vim.o.smartcase = true
 
+-- Spellchecking
+vim.o.spelllang = 'fr,en'
+
 -- Keep signcolumn on by default
 vim.o.signcolumn = 'yes'
 
@@ -248,6 +251,11 @@ rtp:prepend(lazypath)
 require('lazy').setup({
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
   'NMAC427/guess-indent.nvim', -- Detect tabstop and shiftwidth automatically
+  --  {
+  --    'ravibrock/spellwarn.nvim',
+  --    event = 'VeryLazy',
+  --    config = true,
+  --  },
   {
     'NeogitOrg/neogit',
     dependencies = {
