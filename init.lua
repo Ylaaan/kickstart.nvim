@@ -119,13 +119,13 @@ vim.schedule(function()
 end)
 
 -- Enable break indent
-vim.opt.tabstop = 2
-vim.opt.softtabstop = 2
-vim.opt.shiftwidth = 2
-vim.opt.expandtab = true
-vim.opt.autoindent = true
-vim.opt.smartindent = true
-vim.o.breakindent = true
+-- vim.opt.tabstop = 2
+-- vim.opt.softtabstop = 2
+-- vim.opt.shiftwidth = 2
+-- vim.opt.expandtab = true
+-- vim.opt.autoindent = true
+-- vim.opt.smartindent = true
+-- vim.o.breakindent = true
 
 -- Save undo history
 vim.o.undofile = true
@@ -254,6 +254,7 @@ rtp:prepend(lazypath)
 
 --
 -- NOTE: Here is where you install your plugins.
+require('guess-indent').setup {}
 require('lazy').setup({
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
   'NMAC427/guess-indent.nvim', -- Detect tabstop and shiftwidth automatically
