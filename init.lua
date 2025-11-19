@@ -254,7 +254,6 @@ rtp:prepend(lazypath)
 
 --
 -- NOTE: Here is where you install your plugins.
-require('guess-indent').setup {}
 require('lazy').setup({
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
   'NMAC427/guess-indent.nvim', -- Detect tabstop and shiftwidth automatically
@@ -686,6 +685,7 @@ require('lazy').setup({
           end
         end,
       })
+      require('guess-indent').setup {}
 
       -- Diagnostic Config
       -- See :help vim.diagnostic.Opts
